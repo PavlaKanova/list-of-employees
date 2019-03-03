@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="section">
+    <h2>List of Submitted Employees</h2>
+    <table class="submitted-employees">
+      <th class="id">ID</th><th class="firstname">Firstname</th><th class="lastname">Lastname</th><th class="position">Position</th><th class="birthday">Birthday</th>
+      <tr class="submitted-employee" *ngFor="let employee of employees | async">
+        <td class="id"><span class="spanId">{{employee.id}}</span></td><td class="firstname"><span class="spanFirstname">{{employee.firstname}}</span></td><td class="lastname"><span class="spanLastname">{{employee.lastname}}</span></td><td class="position"><span class="spanPosition">{{employee.position}}</span></td><td class="birthday"><span class="spanBirthday">{{employee.birthday | date:'dd.MM.yyyy'}}</span></td>
+      </tr>
+    </table>
+  </div>
+</div>

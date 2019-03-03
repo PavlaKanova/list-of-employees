@@ -1,0 +1,81 @@
+<div class="container">
+  <div class="section">
+    <h2>Add Employee</h2>
+    <div class="employeeForm">
+      <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="form-group" [ngClass]="{'has-error':!employeeForm.controls['firstname'].valid}">
+          <label class="visible">Firstname</label>
+          <input class="form-control" id="firstname" name="firstname" type="text" placeholder="Pavla" required
+            minlength="2" maxlength="25" formControlName="firstname" [formControl]="employeeForm.controls['firstname']">
+          <div class="alert alert-danger" *ngIf="!employeeForm.controls['firstname'].valid">Firstname is required, must
+            be
+            at least 2 characters long and cannot be more than 25 characters long.</div>
+        </div>
+        <div class="form-group" [ngClass]="{'has-error':!employeeForm.controls['lastname'].valid}">
+          <label class="visible">Lastname</label>
+          <input class="form-control" id="lastname" name="lastname" type="text" placeholder="Káňová" required
+            minlength="2" maxlength="50" formControlName="lastname" [formControl]="employeeForm.controls['lastname']">
+          <div class="alert alert-danger" *ngIf="!employeeForm.controls['lastname'].valid">Lastname is required, must be
+            at least 2 characters long and cannot be more than 50 characters long.</div>
+        </div>
+        <div class="form-group">
+          <label class="visible">Position</label>
+          <select class="form-control select-list" id="position" name="position" formControlName="position">
+            <option value="">--- Select position ---</option>
+            <option *ngFor="let position of positions" [value]="position">{{position}}</option>
+          </select>
+        </div>
+        <div class="form-group" [ngClass]="{'has-error':!employeeForm.controls['birthday'].valid}">
+          <label class="visible">Birthday</label>
+          <input class="form-control" id="birthday" name="birthday" type="date" required formControlName="birthday"
+            [formControl]="employeeForm.controls['birthday']">
+          <div class="alert alert-danger" *ngIf="!employeeForm.controls['birthday'].valid">Birthday is required.</div>
+        </div>
+        <button [disabled]="!employeeForm.valid" type="submit" class="submit">Add</button>
+        <button [disabled]="employeeForm.pristine" type="reset" (click)="revert()" class="revert">Revert</button>
+      </form>
+    </div>
+  </div>
+  <div class="section">
+    <h2>Update Employees</h2>
+    <ul class="employees">
+      <li><span class="id">ID</span><span class="firstname">Firstname</span><span class="lastname">Lastname</span><span
+          class="position">Position</span><span class="birthday">Birthday</span><span class="remove">X</span></li>
+      <li class="employee" *ngFor="let employee of employees" (click)="onClick(employee)"
+        [class.selected]="employee === selectedEmployee" [id]="employee.id">
+        <label class="invisible">ID</label>
+        <span id="id">{{employee.id}}</span>
+        <label class="invisible">Firstname</label>
+        <input class="form-control" id="firstname" name="firstname" type="text" [(ngModel)]="employee.firstname"
+          [value]="employee.firstname" required minlength="2" maxlength="25" #firstname="ngModel" (change)="save()">
+        <label class="invisible">Lastname</label>
+        <input class="form-control" id="lastname" name="lastname" type="text" [(ngModel)]="employee.lastname"
+          [value]="employee.lastname" required minlength="2" maxlength="50" #lastname="ngModel" (change)="save()">
+        <label class="invisible">Position</label>
+        <select class="form-control select-list" id="position" name="position" [(ngModel)]="employee.position"
+          (change)="save()">
+          <option value="">--- Select position ---</option>
+          <option *ngFor="let position of positions" [value]="position">{{position}}</option>
+        </select>
+        <label class="invisible">Birthday</label>
+        <input class="form-control" id="birthday" name="birthday" type="date" [(ngModel)]="employee.birthday"
+          [value]="employee.birthday" required #birthday="ngModel" (change)="save()">
+        <button class="delete" (click)="delete(employee); $event.stopPropagation()">X</button>
+        <div [hidden]="firstname.valid || firstname.pristine" class="alert alert-danger">Firstname is required, must be
+          at least 2 characters long and cannot be more than 25 characters long.</div>
+        <div [hidden]="lastname.valid || lastname.pristine" class="alert alert-danger">Lastname is required, must be at
+          least 2 characters long and cannot be more than 50 characters long.</div>
+        <div [hidden]="birthday.valid || birthday.pristine" class="alert alert-danger">Birthday is required.</div>
+      </li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>List of Employees</h2>
+    <table class="list-of-employees">
+      <th class="id"><span>ID</span></th><th class="firstname"><span>Firstname</span></th><th class="lastname"><span>Lastname</span></th><th class="position"><span>Position</span></th><th class="birthday"><span>Birthday</span></th>
+      <tr *ngFor="let employee of employees">
+        <td class="id"><span>{{employee.id}}</span></td><td class="firstname"><span>{{employee.firstname}}</span></td><td class="lastname"><span>{{employee.lastname}}</span></td><td class="position"><span>{{employee.position}}</span></td><td class="birthday"><span>{{employee.birthday | date:'dd.MM.yyyy'}}</span></td>
+      </tr>
+    </table>
+  </div>
+</div>

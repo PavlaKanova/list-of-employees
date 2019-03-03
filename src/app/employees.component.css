@@ -1,0 +1,571 @@
+.employeeForm {
+  padding: 0px 36px 0px 36px;
+  margin: 0px;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+form input {
+  padding: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+  border: 1px solid rgba(255,255,255,1);
+  background: rgba(255,255,255,1);
+  color: #000;
+  border-radius: 3px;
+  height: 50px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+form .select-list {
+  padding: 8px 0px 8px 0px;
+  margin-bottom: 5px;
+  height: 50px;
+  text-decoration: none;
+  width: 100%;
+  border: 1px solid rgba(255,255,255,1);
+  background: rgba(255,255,255,1);
+  color: #000;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+button.submit {
+  padding: 8px 0px 8px 0px;
+  margin-bottom: 5px;
+  height: 50px;
+  border: 1px solid #42A948;
+  background: #42A948;
+  color: #000;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+  cursor: hand;
+  margin-bottom: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+button.revert {
+  padding: 8px 0px 8px 0px;
+  margin-bottom: 5px;
+  height: 50px;
+  border: 1px solid rgba(200,200,200,1);
+  background: rgba(200,200,200,1);
+  color: #000;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+  cursor: hand;
+  text-align: center;
+  width: 100%;
+}
+
+button:disabled {
+  padding: 8px 0px 8px 0px;
+  margin-bottom: 5px;
+  height: 50px;
+  border: 1px solid rgba(200,200,200,.5);
+  background: rgba(200,200,200,.5);
+  color: #888;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: auto;
+  margin-bottom: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.employees {
+  width: 100%;
+  overflow: hidden;
+}
+
+.employees .id {
+  padding: 8px 0px 8px 0px;
+  margin-left: 2px;
+  margin-right: 6px;
+  width: 3%;
+  color: #444;
+  height: 22px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.employees .firstname {
+  padding: 8px 0px 8px 8px;
+  width: 21%;
+  margin-left: 5px;
+  margin-right: 6px;
+  color: #444;
+  height: 22px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.employees .lastname, .employees .birthday {
+  padding: 8px 0px 8px 8px;
+  width: 21%;
+  margin-left: 5px;
+  margin-right: 6px;
+  color: #444;
+  height: 22px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.employees .position {
+  padding: 8px 0px 8px 0px;
+  width: 21%;
+  margin-left: 5px;
+  margin-right: 21px;
+  color: #444;
+  height: 22px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.employees .remove {
+  padding: 8px 0px 8px 0px;
+  margin-left: 1px;
+  margin-right: 1px;
+  width: 3%;
+  color: #444;
+  height: 22px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+}
+
+.employees #id {
+  padding: 8px 0px 8px 0px;
+  margin-left: 2px;
+  width: 3%;
+  color: #000;
+  height: 22px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+input {
+  padding: 8px 0px 8px 8px;
+  width: 21%;
+  border: 1px solid rgba(255,255,255,1);
+  background: rgba(255,255,255,1);
+  color: #000;
+  border-radius: 3px;
+  height: 22px;
+  font-size: 14px;
+}
+
+.select-list {
+  padding: 8px 0px 8px 0px;
+  height: 40px;
+  text-decoration: none;
+  width: 23%;
+  border: 1px solid rgba(255,255,255,1);
+  background: rgba(255,255,255,1);
+  color: #000;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+button.delete {
+  padding: 8px 0px 8px 0px;
+  height: 40px;
+  width: 3%;
+  border: 1px solid rgba(200,200,200,1);
+  background: rgba(200,200,200,1);
+  color: #000;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+button.delete:hover {
+  background-color: #888;
+}
+
+form .form-control.ng-valid[required], form .form-control.ng-valid.required  {
+  border-bottom: 5px solid #42A948;
+}
+
+form .form-control.ng-invalid  {
+  border-bottom: 5px solid #a94442;
+}
+
+.employees li .form-control.ng-valid[required], .employees li .form-control.ng-valid.required  {
+  border-left: 5px solid #42A948;
+}
+
+.employees li .form-control.ng-invalid  {
+  border-left: 5px solid #a94442;
+}
+
+.alert {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  color: #a94442;
+}
+
+table.list-of-employees {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 5px;
+}
+
+.list-of-employees th.id {
+  padding: 8px 0px 8px 0px;
+  width: 3.5%;
+  margin-left: 2px;
+  text-align: left;
+  display: inline-block;
+}
+
+.list-of-employees th.firstname {
+  padding: 8px 0px 8px 0px;
+  width: 23%;
+  border-top: 1px solid #000;
+  text-align: left;
+  background: rgba(200,200,200,.5);
+  display: inline-block;
+}
+
+.list-of-employees th.lastname, .list-of-employees th.position, .list-of-employees th.birthday {
+  padding: 8px 0px 8px 0px;
+  width: 23%;
+  border-top: 1px solid #000;
+  text-align: left;
+  background: rgba(200,200,200,.5);
+  display: inline-block;
+}
+
+.list-of-employees .id {
+  padding: 8px 0px 8px 0px;
+  width: 3.5%;
+  margin-left: 2px;
+  color: #000;
+  height: 22px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.list-of-employees .firstname {
+  padding: 8px 0px 8px 0px;
+  width: 23%;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  color: #000;
+  height: 22px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.list-of-employees .lastname, .list-of-employees .position, .list-of-employees .birthday {
+  padding: 8px 0px 8px 0px;
+  width: 23%;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  color: #000;
+  height: 22px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.list-of-employees .firstname span, .list-of-employees .lastname span, .list-of-employees .position span, .list-of-employees .birthday span {
+  padding-left: 8px;
+  margin: 0px;
+}
+
+.visible {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.invisible {
+  display: none;
+}
+
+@media (max-width: 1010px) {
+  .employeeForm {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .employees .id, .employees .firstname, .employees .lastname, .employees .birthday, .employees .position, .employees .remove {
+    display: none;
+    float: both;
+    overflow: hidden;
+  }
+
+  .employees #id {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+  }
+
+  input {
+    float: right;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    height: 40px;
+  }
+
+  .select-list {
+    float: right;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  button.delete {
+    float: right;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+  .alert {
+    margin-left: 0px;
+  }
+
+  .invisible {
+    margin-bottom: 3px;
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 681px) and (max-width: 900px) {
+
+  .list-of-employees th.id {
+    margin-left: 3px;
+  }
+
+  .list-of-employees .id {
+    padding: 8px 0px 8px 0px;
+    width: 3.5%;
+    margin-left: 3px;
+    height: 22px;
+    font-size: 12px;
+    display: inline-block;
+  }
+
+  .list-of-employees .firstname, .list-of-employees .lastname, .list-of-employees .position, .list-of-employees .birthday {
+    padding: 8px 0px 8px 0px;
+    width: 23%;
+    height: 22px;
+    font-size: 12px;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 680px) {
+  
+  .list-of-employees th.id {
+    margin-left: 4px;
+  }
+
+  .list-of-employees .id {
+    padding: 8px 0px 8px 0px;
+    width: 3.5%;
+    margin-left: 4px;
+    height: 22px;
+    font-size: 10px;
+    display: inline-block;
+  }
+
+  .list-of-employees .firstname, .list-of-employees .lastname, .list-of-employees .position, .list-of-employees .birthday {
+    padding: 8px 0px 8px 0px;
+    width: 23%;
+    height: 22px;
+    font-size: 10px;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 422px) and (max-width: 480px) {
+  
+  .list-of-employees th.id {
+    margin-left: 4px;
+  }
+
+  .list-of-employees .id {
+    padding: 8px 0px 8px 0px;
+    width: 3.5%;
+    margin-left: 4px;
+    height: 22px;
+    font-size: 9px;
+    display: inline-block;
+  }
+
+  .list-of-employees .firstname, .list-of-employees .lastname, .list-of-employees .position, .list-of-employees .birthday {
+    padding: 8px 0px 8px 0px;
+    width: 23%;
+    height: 22px;
+    font-size: 9px;
+    display: inline-block;
+  }
+
+  .list-of-employees .firstname span, .list-of-employees .lastname span, .list-of-employees .position span, .list-of-employees .birthday span {
+    padding-left: 2px;
+    margin: 0px;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 421px) {
+  
+  .list-of-employees th.id {
+    margin-left: 0px;
+  }
+
+  .list-of-employees .id {
+    padding: 8px 0px 8px 0px;
+    width: 3.5%;
+    margin-left: 0px;
+    height: 22px;
+    font-size: 9px;
+    display: inline-block;
+  }
+
+  .list-of-employees .firstname, .list-of-employees .lastname, .list-of-employees .position, .list-of-employees .birthday {
+    padding: 8px 0px 8px 0px;
+    width: 23%;
+    height: 22px;
+    font-size: 9px;
+    display: inline-block;
+  }
+
+  .list-of-employees .firstname span, .list-of-employees .lastname span, .list-of-employees .position span, .list-of-employees .birthday span {
+    padding-left: 2px;
+    margin: 0px;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 375px) {
+  
+  .list-of-employees th.id {
+    margin-left: 1px;
+  }
+
+  .list-of-employees .id {
+    padding: 8px 0px 8px 0px;
+    width: 3.5%;
+    margin-left: 1px;
+    height: 22px;
+    font-size: 9px;
+    display: inline-block;
+  }
+
+  .list-of-employees .firstname, .list-of-employees .lastname, .list-of-employees .position, .list-of-employees .birthday {
+    padding: 8px 0px 8px 0px;
+    width: 23%;
+    height: 22px;
+    font-size: 9px;
+    display: inline-block;
+  }
+
+  .list-of-employees .firstname span, .list-of-employees .lastname span, .list-of-employees .position span, .list-of-employees .birthday span {
+    padding-left: 2px;
+    margin: 0px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 360px) {
+  
+  .list-of-employees th.id {
+    margin-left: 1px;
+  }
+
+  .list-of-employees .id {
+    padding: 8px 0px 8px 0px;
+    width: 3.5%;
+    margin-left: 1px;
+    height: 22px;
+    font-size: 8px;
+    display: inline-block;
+  }
+
+  .list-of-employees .firstname, .list-of-employees .lastname, .list-of-employees .position, .list-of-employees .birthday {
+    padding: 8px 0px 8px 0px;
+    width: 23%;
+    height: 22px;
+    font-size: 8px;
+    display: inline-block;
+  }
+
+  .list-of-employees .firstname span, .list-of-employees .lastname span, .list-of-employees .position span, .list-of-employees .birthday span {
+    padding-left: 2px;
+    margin: 0px;
+  }
+}
+
+@media (min-width: 281px) and (max-width: 320px) {
+  
+  .list-of-employees th.id {
+    margin-left: 0px;
+  }
+
+  .list-of-employees .id {
+    padding: 8px 0px 8px 0px;
+    width: 3.5%;
+    margin-left: 0px;
+    height: 22px;
+    font-size: 6px;
+    display: inline-block;
+  }
+
+  .list-of-employees .firstname, .list-of-employees .lastname, .list-of-employees .position, .list-of-employees .birthday {
+    padding: 8px 0px 8px 0px;
+    width: 23%;
+    height: 22px;
+    font-size: 6px;
+    display: inline-block;
+  }
+
+  .list-of-employees .firstname span, .list-of-employees .lastname span, .list-of-employees .position span, .list-of-employees .birthday span {
+    padding-left: 2px;
+    margin: 0px;
+  }
+}
+
+@media (max-width: 280px) {
+  
+  .list-of-employees th.id {
+    margin-left: 0px;
+  }
+
+  .list-of-employees .id {
+    padding: 8px 0px 8px 0px;
+    width: 3.5%;
+    margin-left: 0px;
+    height: 22px;
+    font-size: 5px;
+    display: inline-block;
+  }
+
+  .list-of-employees .firstname, .list-of-employees .lastname, .list-of-employees .position, .list-of-employees .birthday {
+    padding: 8px 0px 8px 0px;
+    width: 23%;
+    height: 22px;
+    font-size: 5px;
+    display: inline-block;
+  }
+
+  .list-of-employees .firstname span, .list-of-employees .lastname span, .list-of-employees .position span, .list-of-employees .birthday span {
+    padding-left: 2px;
+    margin: 0px;
+  }
+}

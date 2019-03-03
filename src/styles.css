@@ -1,0 +1,370 @@
+h1 {
+  color: #369;
+  font-weight: bolder;
+  font-size: 150%;
+}
+
+h2, h3 {
+  color: #444;
+  font-weight: bold;
+  font-size: 125%;
+  margin-left: 2px;
+}
+
+body {
+  margin: 2em;
+  background: rgba(255,255,255,.75);
+}
+
+body, input[text], button {
+  color: #888;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.home-section {
+  margin: 5px auto;
+  padding: 15px;
+  max-width: 988px;
+  text-align: center;
+}
+
+.section {
+  margin: 5px auto;
+  padding: 15px;
+  max-width: 988px;
+  background: rgba(238,238,238,.75);
+  border-radius: 5px;
+  width: 100%;
+  overflow: hidden;
+}
+
+a {
+  cursor: pointer;
+  cursor: hand;
+}
+
+nav a {
+  padding: 5px;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+nav a:visited, a:link {
+  color: #607D8B;
+}
+
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+
+nav a.active {
+  color: #039be5;
+}
+
+.employees {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.employees li {
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+table.submitted-employees {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 5px;
+}
+
+.submitted-employees th.id {
+  border-top: 1px solid #000;
+  margin-left: 2px;
+  text-align: center;
+  background: rgba(200,200,200,.5);
+}
+
+.submitted-employees th.firstname, .submitted-employees th.lastname, .submitted-employees th.position, .submitted-employees th.birthday {
+  border-top: 1px solid #000;
+  margin-left: 0px;
+  text-align: center;
+  background: rgba(200,200,200,.5);
+}
+
+.submitted-employees .id {
+  padding: 8px 0px 8px 0px;
+  width: 7%;
+  margin-left: 2px;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  color: #000;
+  height: 22px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.submitted-employees .firstname, .submitted-employees .lastname, .submitted-employees .position, .submitted-employees .birthday {
+  padding: 8px 0px 8px 0px;
+  margin: 0px;
+  width: 23%;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  color: #000;
+  height: 22px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.submitted-employees .id span, .submitted-employees .firstname span, .submitted-employees .lastname span, .submitted-employees .position span, .submitted-employees .birthday span {
+  padding-left: 8px;
+  margin: 0px;
+}
+
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media (min-width: 681px) and (max-width: 900px) {
+  h2, h3 {
+    margin-left: 3px;
+  }
+
+  .submitted-employees th.id {
+    margin-left: 3px;
+  }
+
+  .submitted-employees .id {
+    padding: 8px 0px 8px 0px;
+    width: 6%;
+    margin-left: 3px;
+    height: 22px;
+    font-size: 14px;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 680px) {
+  h2, h3 {
+    margin-left: 4px;
+  }
+  
+  .submitted-employees th.id {
+    margin-left: 4px;
+  }
+
+  .submitted-employees .id {
+    padding: 8px 0px 8px 0px;
+    width: 5%;
+    margin-left: 4px;
+    height: 22px;
+    font-size: 14px;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 422px) and (max-width: 480px) {
+  h2, h3 {
+    margin-left: 4px;
+  }
+  
+  .submitted-employees th.id {
+    margin-left: 4px;
+  }
+
+  .submitted-employees .id {
+    padding: 8px 0px 8px 0px;
+    width: 5%;
+    margin-left: 4px;
+    height: 22px;
+    font-size: 11px;
+    display: inline-block;
+  }
+
+  .submitted-employees .firstname, .submitted-employees .lastname, .submitted-employees .position, .submitted-employees .birthday {
+    padding: 8px 0px 8px 0px;
+    margin: 0px;
+    width: 23%;
+    height: 22px;
+    font-size: 11px;
+    display: inline-block;
+  }
+
+  .submitted-employees .id span, .submitted-employees .firstname span, .submitted-employees .lastname span, .submitted-employees .position span, .submitted-employees .birthday span {
+    padding-left: 2px;
+    margin: 0px;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 421px) {
+  h2, h3 {
+    margin-left: 0px;
+  }
+  
+  .submitted-employees th.id {
+    margin-left: 0px;
+  }
+
+  .submitted-employees .id {
+    padding: 8px 0px 8px 0px;
+    width: 6%;
+    margin-left: 0px;
+    height: 22px;
+    font-size: 11px;
+    display: inline-block;
+  }
+
+  .submitted-employees .firstname, .submitted-employees .lastname, .submitted-employees .position, .submitted-employees .birthday {
+    padding: 8px 0px 8px 0px;
+    margin: 0px;
+    width: 23%;
+    height: 22px;
+    font-size: 11px;
+    display: inline-block;
+  }
+
+  .submitted-employees .id span, .submitted-employees .firstname span, .submitted-employees .lastname span, .submitted-employees .position span, .submitted-employees .birthday span {
+    padding-left: 2px;
+    margin: 0px;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 375px) {
+  h2, h3 {
+    margin-left: 1px;
+  }
+  
+  .submitted-employees th.id {
+    margin-left: 1px;
+  }
+
+  .submitted-employees .id {
+    padding: 8px 0px 8px 0px;
+    width: 5%;
+    margin-left: 1px;
+    height: 22px;
+    font-size: 11px;
+    display: inline-block;
+  }
+
+  .submitted-employees .firstname, .submitted-employees .lastname, .submitted-employees .position, .submitted-employees .birthday {
+    padding: 8px 0px 8px 0px;
+    margin: 0px;
+    width: 23%;
+    height: 22px;
+    font-size: 11px;
+    display: inline-block;
+  }
+
+  .submitted-employees .id span, .submitted-employees .firstname span, .submitted-employees .lastname span, .submitted-employees .position span, .submitted-employees .birthday span {
+    padding-left: 2px;
+    margin: 0px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 360px) {
+  h2, h3 {
+    margin-left: 1px;
+  }
+  
+  .submitted-employees th.id {
+    margin-left: 1px;
+  }
+
+  .submitted-employees .id {
+    padding: 8px 0px 8px 0px;
+    width: 5%;
+    margin-left: 1px;
+    height: 22px;
+    font-size: 10px;
+    display: inline-block;
+  }
+
+  .submitted-employees .firstname, .submitted-employees .lastname, .submitted-employees .position, .submitted-employees .birthday {
+    padding: 8px 0px 8px 0px;
+    margin: 0px;
+    width: 23%;
+    height: 22px;
+    font-size: 10px;
+    display: inline-block;
+  }
+
+  .submitted-employees .id span, .submitted-employees .firstname span, .submitted-employees .lastname span, .submitted-employees .position span, .submitted-employees .birthday span {
+    padding-left: 2px;
+    margin: 0px;
+  }
+}
+
+@media (min-width: 281px) and (max-width: 320px) {
+  h2, h3 {
+    margin-left: 0px;
+  }
+  
+  .submitted-employees th.id {
+    margin-left: 0px;
+  }
+
+  .submitted-employees .id {
+    padding: 8px 0px 8px 0px;
+    width: 5%;
+    margin-left: 0px;
+    height: 22px;
+    font-size: 8px;
+    display: inline-block;
+  }
+
+  .submitted-employees .firstname, .submitted-employees .lastname, .submitted-employees .position, .submitted-employees .birthday {
+    padding: 8px 0px 8px 0px;
+    margin: 0px;
+    width: 23%;
+    height: 22px;
+    font-size: 8px;
+    display: inline-block;
+  }
+
+  .submitted-employees .id span, .submitted-employees .firstname span, .submitted-employees .lastname span, .submitted-employees .position span, .submitted-employees .birthday span {
+    padding-left: 2px;
+    margin: 0px;
+  }
+}
+
+@media (max-width: 280px) {
+  h2, h3 {
+    margin-left: 0px;
+  }
+  
+  .submitted-employees th.id {
+    margin-left: 0px;
+  }
+
+  .submitted-employees .id {
+    padding: 8px 0px 8px 0px;
+    width: 4%;
+    margin-left: 0px;
+    height: 22px;
+    font-size: 6px;
+    display: inline-block;
+  }
+
+  .submitted-employees .firstname, .submitted-employees .lastname, .submitted-employees .position, .submitted-employees .birthday {
+    padding: 8px 0px 8px 0px;
+    margin: 0px;
+    width: 23%;
+    height: 22px;
+    font-size: 6px;
+    display: inline-block;
+  }
+
+  .submitted-employees .id span, .submitted-employees .firstname span, .submitted-employees .lastname span, .submitted-employees .position span, .submitted-employees .birthday span {
+    padding-left: 2px;
+    margin: 0px;
+  }
+}
